@@ -5,8 +5,8 @@ const Toast = ({ message, type, onClose }) => {
   useEffect(() => {
     const t = setTimeout(onClose, 3500);
     return () => clearTimeout(t);
-  }, []);
-
+  }, [onClose]);
+  
   const isSuccess = type === "success";
 
   return (
